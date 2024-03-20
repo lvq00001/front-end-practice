@@ -1,0 +1,89 @@
+.progress-panel {
+    display: flex;
+    direction: row;
+    gap: 25px;
+}
+
+.-complete{
+    background-color: #00a5af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.-complete::after {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid #000000;
+}
+
+/* icon + text */
+.-complete .progress-panel--arrow-content {
+    margin-left: 25px;
+    padding: 1%;
+    display: flex;
+    direction: row;
+}
+
+/* icon */
+.-complete .progress-panel--arrow-icon {
+    margin-right: 2%;
+    filter: invert(100%);
+}
+/* text */
+.-complete .progress-panel--arrow-text {
+    color: #ffffff;
+    
+}
+
+
+.-active{
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+/* icon + text */
+.-active .progress-panel--arrow-content {
+    display: flex;
+    direction: row;
+    padding: 1%;
+}
+
+/* icon */
+.-active .progress-panel--arrow-icon {
+    margin-right: 1%;
+    fill: #00a5af !important;
+}
+/* text */
+.-active .progress-panel--arrow-text {
+    color: #00a5af;
+}
+
+
+
+
+.-incomplete{
+    background-color: #e8ebee;
+    padding: 10px;
+}
+
+/* icon + text */
+.-incomplete .progress-panel--arrow-content {
+    display: flex;
+    direction: row;
+    padding: 1%;
+}
+
+/* icon */
+.-incomplete .progress-panel--arrow-icon {
+    margin-right: 1%;
+    fill: #8291a3 !important;
+}
+/* text */
+.-incomplete .progress-panel--arrow-text {
+    color: #8291a3;
+}
+
+

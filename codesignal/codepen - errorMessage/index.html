@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ticket-sales-container">
+    <label for="ticket-quantity">Number of Tickets:</label>
+    <select id="ticket-quantity" name="ticket-quantity">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select>
+    
+    <button id="add-to-cart">Add to Cart</button>
+  </div>
+  
+  <div id="error-message" class="modal" aria-modal="true">
+    <div class="modal-content">
+      <p>Sorry, this event is sold out.</p>
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>

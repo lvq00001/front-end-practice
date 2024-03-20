@@ -1,0 +1,180 @@
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.frame {
+    font-family: sans-serif;
+    background-color: rgba(51, 72, 95, 1);
+    color: rgba(255, 255, 255, 1);
+    height: 370px;
+    width: 370px;
+    
+}
+
+.center {
+    margin-left: 5%;
+    height: 90%;
+    width: 90%;
+}
+
+.headline .normal {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.headline .small {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.headline {
+    padding-top: 20px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.circle-big {
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+    height: 114px;
+}
+
+.circle-big svg {
+    height: 114px;
+    width: 114px;
+    
+}
+
+.circle-big svg {
+    stroke-width: 10px;
+}
+
+
+
+.circle-big .progress {
+    stroke: rgb(36, 224, 180);
+    stroke-dasharray: 214;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(270deg);
+}
+
+.circle-big .main {
+    stroke: rgb(27, 42, 51);
+}
+
+.circle-big .text {
+    position: absolute;
+    text-align: center;
+}
+
+.circle-big .text .normal{
+    font-size: 24px;
+}
+
+.circle-big .text .small{
+    font-size: 12px;
+    color: rgba(100, 129, 146, 1);
+}
+
+.circle-small {
+    margin-bottom: 63px;
+    width: 80px;
+    height: 80px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+}
+
+.circle-small:first-child {
+    margin-left: 83px;
+}
+.circle-small:last-child {
+    margin-right: 83px;
+}
+
+.circle-small svg {
+    height: 80px;
+    width: 80px;
+    
+}
+
+.circle-small .text .normal{
+    font-size: 15px;
+}
+
+.circle-small .text .small{
+    font-size: 10px;
+    color: rgba(100, 129, 146, 1);
+}
+
+.circle-small .text {
+    position: absolute;
+    text-align: center;
+}
+
+.circles-small {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 44px;
+}
+
+.circle-small {
+    stroke-width: 6px;
+    
+}
+
+.circle-small:first-child .progress {
+    stroke: rgb(255, 101, 69);
+    stroke-dasharray: 180;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(270deg);
+}
+
+.circle-small:last-child .progress {
+    stroke: rgb(255, 101, 69);
+    stroke-dasharray: 100;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(320deg);
+}
+
+.circle-small .main {
+    stroke: rgb(27, 42, 51);
+}
+
+@media only screen and (max-width: 430px) {
+    .frame {
+        height: 370px;
+        width: 180px;
+    }
+    .headline {
+        padding-top: 10px;
+    }
+    .circles-small {
+        margin-top: 5px;
+        display: grid;
+        gap: 5px;
+    }
+    .circle-small {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}

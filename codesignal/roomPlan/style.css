@@ -1,0 +1,76 @@
+.plan {
+    width: 100vw;
+    height: 100vh;
+}
+
+.room {
+    width: 100%;
+    height: 105%;
+    border: solid;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.room--upper {
+    margin-top: 8px;
+    width: 100%;
+    height: 105%;
+}
+
+.room--workspace {
+    /* 25% of room--upper/width x 93% of room--upper/height */
+    width: 25%;
+    height: 93%;
+    background-color: rgba(220, 220, 220, 1);
+    float: left;
+}
+
+
+.room--workspace-table {
+    /* 40% of room--workspace/width x 96% of room--workspace/height */
+    width: 40%;
+    height: 96%;
+    background-color: rgba(105, 105, 105, 1);
+}
+
+
+.room--workspace-chair {
+    /* 20% of room--workspace/width x 20% of room--workspace/height*/
+    width: 20%;
+    height: 20%;
+    background-color: rgba(128, 128, 128, 1);
+}
+
+.room--upper-cupboards {
+    /*  30% of room--upper/width x 25% of room--upper/height */
+    width: 30%;
+    height: 25%;
+    background-color: rgba(220, 220, 220, 1);
+}
+
+.room--upper-cupboards-cupboard1-1 {
+    /*  86% of room--upper-cupboards/height */
+    width: 50%;
+    height: 86%;
+    background-color: rgba(205, 133, 63, 1);
+}
+
+.room--upper-cupboards-cupboard1-2 {
+    /*  86% of room--upper-cupboards/height */
+    width: 50%;
+    height: 86%;
+    background-color: rgba(205, 133, 63, 1);
+}
+
+.room--door {
+    /* room--door should be of size close to 2% of room--upper/width x 20% of room--upper/height */
+    width: 2%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.room--bed {
+/* room--bed should be of size close to 40% of room--bottom/width x 80% of room--bottom/height */
+    width: 40%;
+    height: 80%;
+    background-color: rgba(211, 211, 211, 1);
+}

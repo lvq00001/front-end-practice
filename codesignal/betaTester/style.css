@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+.beta-request {
+    padding: auto;
+    
+}
+
+.header {
+    text-align: center;
+    background-color: rgb(68, 191, 163);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.body {
+    text-align: center;
+    background-color: aliceblue;
+    padding-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 5px rgb(189, 185, 185);
+}
+
+.form input {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding: 5px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 0;
+}
+  
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 499px) {
+    .title {
+        font-size: 20px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    input[type="submit"] {
+        height: 43px;
+        background-color: rgb(52, 152, 219);
+        font-size: 14px;
+    }
+    input[type="text"] {
+        width: 80%;
+    }
+    .group {
+        text-align: center;
+    }
+    .group input {
+        margin-left: 20px;
+    }
+
+}
+
+
+@media (min-width: 500px) {
+    .beta-request {
+        max-width: 500px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    input[type="submit"] {
+        height: 43px;
+        background-color: rgb(52, 152, 219);
+        font-size: 14px;
+    }
+    
+    .group {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        margin: 0;
+    }
+
+    .group input:last-child {
+        margin-right: 18px;
+    }
+    
+    .group input:first-child {
+        margin-right: 20px;
+        margin-left: 18px;
+    }
+}
+
+
+
+
+
+
+

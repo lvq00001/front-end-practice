@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="game">
+        <div class="game--field">
+          <div class="game--overlay">
+            <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+            </svg>
+            <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+               <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+            </svg>
+            <div class="game--winner">Winner!</div>
+          </div>
+          <div class="game--grid">
+            <div class="game--row">
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+            </div>
+            <div class="game--row">
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+            </div>
+            <div class="game--row">
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+              <div class="game--cell">
+                <svg class="game--cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z"/>
+                </svg>
+                <svg class="game--circle" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 100 100" version="1.1">
+                   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="15" fill="none" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="game--restart">Restart game</div>
+      </div>
+</body>
+<script>
+    $(".game--cell").children().hide();
+    var turn = 1;
+    var arr = {
+      a0:0, a1:0, a2:0,  b0:0, b1:0, b2:0,  c0:0, c1:0, c2:0
+    };
+    var name_arr = ['a0', 'a1', 'a2', 'b0', 'b1', 'b2', 'c0', 'c1', 'c2'];
+    var index = 0;
+    $(".game--cell").each(function(index, element) { 
+        $(element).attr('id', name_arr[index]);
+        index++;
+    });
+
+    $(".game--cell").on("click", function() {
+        if ($(this).children(".game--cross").is(":hidden") && $(this).children(".game--circle").is(":hidden")) {
+            if (turn % 2 != 0) {
+                $(this).children(".game--cross").show();
+                $(this).children(".game--cross").css('display', 'block');
+                let id = $(this).attr('id');
+                arr[id] = 1;
+                turn++;
+            } else {
+                $(this).children(".game--circle").show();
+                let id = $(this).attr('id');
+                arr[id] = 2;
+                turn++;
+            }
+        }
+    });
+    
+    var game_over = 0;
+    var winner = 0;
+    $(".game--cell").on("click", function() {
+      
+          if (arr.a0 == arr.a1 && arr.a1 == arr.a2 && arr.a0 != 0) {
+              winner = arr.a0;
+              game_over = 1;
+          }
+          if (arr.b0 == arr.b1 && arr.b1 == arr.b2 && arr.b0 != 0) {
+              winner = arr.b0;
+              game_over = 1;
+          }
+          if (arr.c0 == arr.c1 && arr.c1 == arr.c2 && arr.c0 != 0) {
+              winner = arr.c0;
+              game_over = 1;
+          }
+          if (arr.a0 == arr.b0 && arr.b0 == arr.c0 && arr.a0 != 0) {
+              winner = arr.a0;
+              game_over = 1;
+          }
+          if (arr.a1 == arr.b1 && arr.b1 == arr.c1 && arr.a1 != 0) {
+              winner = arr.a1;
+              game_over = 1;
+          }
+          if (arr.a2 == arr.b2 && arr.b2 == arr.c2 && arr.a2 != 0) {
+              winner = arr.a2;
+              game_over = 1;
+          }
+          if (arr.a0 == arr.b1 && arr.b1 == arr.c2 && arr.a0 != 0) {
+              winner = arr.a0;
+              game_over = 1;
+          }
+          if (arr.a2 == arr.b1 && arr.b1 == arr.c0 && arr.a2 != 0) {
+              winner = arr.a2;
+              game_over = 1;
+          }
+      
+          
+      
+      console.log(game_over);
+      if (game_over == 1) {
+        if (winner == 1) {
+          $(".game--grid").hide();
+          $(".game--overlay").show()
+          $(".game--overlay").children(".game--circle").hide();
+          $(".game--overlay .game--cross").show();
+          $(".game--overlay .game--cross").css("display", "block");
+          $(".game--overlay").children(".game--cross")
+          .css({
+            'display' : 'flex',
+            'justify-content' : 'center',
+            'align-items' : 'center'
+          });
+        } else {
+          $(".game--grid").hide();
+          $(".game--overlay").show()
+          $(".game--overlay").children(".game--cross").hide();
+          $(".game--overlay").children(".game--circle").show();
+          $(".game--overlay .game--circle").css("display", "block");
+          $(".game--overlay").children(".game--circle")
+          .css({
+            'display' : 'flex',
+            'justify-content' : 'center',
+            'align-items' : 'center'
+          });
+        }
+        
+      }
+    });
+
+
+
+    $(".game--restart").on("click", function() {
+        $(".game--cell").children().hide();
+        turn = 1;
+        game_over = 0;
+        for (const prop of Object.getOwnPropertyNames(arr)) {
+          arr[prop] = 0;
+        }
+        $(".game--overlay").hide();
+        $(".game--grid").show();
+    });
+
+</script>
+</html>

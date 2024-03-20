@@ -1,0 +1,47 @@
+.card-title{
+    margin-bottom:20px;
+}
+.quadrants-upper,.quadrants-lower{
+    display:flex;
+}
+.quadrant{ 
+    width:150px; 
+    height:100px;
+    box-sizing:content-box;
+    color:white;
+    font-family:sans-serif;
+    font-weight:300;
+    text-align:center;
+}
+.quadrant-title{
+    text-align:center;
+    display:block;
+    margin-top:30px;
+}
+.quadrant-number{
+    text-align:center;
+    display:block;
+    margin-bottom:30px;
+}
+.solutions{
+    background:#3498db
+}
+.shortest{
+    background:#ff6545
+}
+.first{
+    background:#44bfa3
+}
+.authored{
+    background:#33485f
+}
+@media all and (max-width: 600px){
+    .quadrants-upper,.quadrants-lower{
+        flex-wrap:wrap;
+    }
+    .quadrant{
+        width:100%;
+        margin:0 25px;
+    }
+    
+}
